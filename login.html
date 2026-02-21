@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h2>Entrar</h2>
+
+<input type="email" id="email">
+<input type="password" id="senha">
+
+<button onclick="login()">Entrar</button>
+</div>
+
+<script>
+function login(){
+let user=JSON.parse(localStorage.getItem("usuario"));
+
+if(!user) return alert("Crie conta primeiro");
+
+if(user.email==email.value && user.senha==senha.value){
+window.location="conta.html";
+}else{
+alert("Dados errados");
+}
+}
+</script>
+
+</body>
+</html>
